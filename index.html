@@ -20,7 +20,7 @@
 
     <header class="header header--border">
       <div class="container top-bar">
-        <a href="./index.html" class="logo"><span class="logo--accent-color">Web</span>Studio</a>
+        <a href="./index.html" class="logo"><span class="logo__web-element">Web</span>Studio</a>
         <nav>
           <ul class="site-nav site-nav--space-set list">
             <li class="site-nav__list-item">
@@ -441,7 +441,7 @@
       <div class="container bottom__shell">
         <div class="bottom__adress-shell">
           <a href="./index.html" class="logo logo--footerstyle"
-            ><span class="logo--accent-color">Web</span>Studio</a
+            ><span class="logo__web-element">Web</span>Studio</a
           >
           <address class="contacts">
             <ul class="list">
@@ -525,7 +525,7 @@
                   />
                 </div>
                 <button type="submit" class="primary-button">
-                  <span class="primary-button_core">
+                  <span class="primary-button__core">
                     Подписаться
                     <svg class="primary-button__icon" width="24px" height="24px">
                       <use href="./images/symbol-defs.svg#icon-telegram"></use>
@@ -545,88 +545,95 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
         <form class="main-form">
-          <ul class="form-list list">
-            <li class="form-list-item">
-              <div class="form-input-shell">
+          <h3 class="main-form__title">Оставьте свои данные, мы вам перезвоним</h3>
+          <ul class="main-form__list list">
+            <li class="main-form__list-item">
+              <div class="main-form__input-shell">
                 <input
-                  class="form-input"
+                  class="main-form__input"
                   type="text"
                   name="customer-name"
                   id="customer-name"
                   placeholder=" "
                   autofocus
                 />
-                <label class="form-label" for="customer-name">Имя</label>
-                <svg class="input-icon" width="18px" height="18px">
+                <label class="main-form__label" for="customer-name">Имя</label>
+                <svg class="main-form__icon" width="18px" height="18px">
                   <use class="h-fill" href="./images/symbol-defs.svg#icon-person"></use>
                 </svg>
               </div>
             </li>
-            <li class="form-list-item">
-              <div class="form-input-shell">
+            <li class="main-form__list-item">
+              <div class="main-form__input-shell">
                 <input
-                  class="form-input"
+                  class="main-form__input"
                   type="tel"
                   name="customer-phone"
                   id="customer-phone"
                   placeholder=" "
                 />
-                <label class="form-label" for="customer-phone">Телефон</label>
-                <svg class="input-icon" width="18px" height="18px">
+                <label class="main-form__label" for="customer-phone">Телефон</label>
+                <svg class="main-form__icon" width="18px" height="18px">
                   <use class="h-fill" href="./images/symbol-defs.svg#icon-phone"></use>
                 </svg>
               </div>
             </li>
-            <li class="form-list-item">
-              <div class="form-input-shell">
+            <li class="main-form__list-item">
+              <div class="main-form__input-shell">
                 <input
-                  class="form-input"
+                  class="main-form__input"
                   type="email"
                   name="customer-email"
                   id="customer-email"
                   placeholder=" "
                 />
-                <label class="form-label" for="customer-email">Почта</label>
-                <svg class="input-icon" width="18px" height="18px">
+                <label class="main-form__label" for="customer-email">Почта</label>
+                <svg class="main-form__icon" width="18px" height="18px">
                   <use class="h-fill" href="./images/symbol-defs.svg#icon-email"></use>
                 </svg>
               </div>
             </li>
-            <li class="form-list-item">
-              <div class="form-input-shell">
+            <li class="main-form__list-item">
+              <div class="main-form__input-shell">
                 <textarea
-                  class="form-input textarea-set"
+                  class="main-form__input main-form__input--textarea-set"
                   name="comment"
                   id="comment"
                   rows="5"
                   placeholder="Введите текст"
                 ></textarea>
-                <label class="form-label" for="comment">Комментарий</label>
+                <label class="main-form__label" for="comment">Комментарий</label>
               </div>
             </li>
           </ul>
-          <div class="checkbox-shell">
-            <label class="checkbox-label" for="agree-check">
-              <input class="checkbox-area" type="checkbox" name="agree-check" id="agree-check" />
-              <span class="checkbox-icon-shell"></span>
-              <svg class="checkbox-icon" width="16px" height="15px">
+          <div class="main-form__checkbox-shell">
+            <label class="main-form__checkbox-label" for="agree-check">
+              <input
+                class="main-form__checkbox-area"
+                type="checkbox"
+                name="agree-check"
+                id="agree-check"
+              />
+              <span class="main-form__checkbox-icon-shell"></span>
+              <svg class="main-form__checkbox-icon" width="16px" height="15px">
                 <use href="./images/symbol-defs.svg#icon-send"></use>
               </svg>
-              <span class="agree-text"
-                >Соглашаюсь с рассылкой и принимаю<a href="#" class="link">Условия договора</a>
+              <span class="main-form__agree-text"
+                >Соглашаюсь с рассылкой и принимаю<a href="#" class="main-form__link link"
+                  >Условия договора</a
+                >
               </span>
             </label>
           </div>
-          <button class="primary-button form-button" type="submit">Отправить</button>
-
-          <button type="button" class="close-button" data-modal-close>
-            <svg class="modal-close-icon h-fill h-shadow" width="30px" height="30px">
-              <use href="./images/symbol-defs.svg#xmark"></use>
-            </svg>
-          </button>
+          <button class="primary-button primary-button--formstyle" type="submit">Отправить</button>
         </form>
+
+        <button type="button" class="close-button" data-modal-close>
+          <svg class="close-button__icon h-fill h-shadow" width="30px" height="30px">
+            <use href="./images/symbol-defs.svg#xmark"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>

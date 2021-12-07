@@ -40,6 +40,25 @@ p {
   margin: 0;
 }
 
+article {
+  margin: 0;
+}
+
+.modal a:active,
+.modal a:focus {
+  outline: none;
+}
+
+.modal input,
+.modal textarea {
+  outline: none;
+}
+
+.modal input:active,
+.modal textarea:active {
+  outline: none;
+}
+
 .link {
   text-decoration: unset;
   margin: 0;
@@ -109,7 +128,7 @@ p {
   transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
-.primary-button_core {
+.primary-button__core {
   display: inline-flex;
   align-items: center;
 }
@@ -117,6 +136,15 @@ p {
 .primary-button__icon {
   display: inline-block;
   margin-left: 10px;
+}
+
+.primary-button--formstyle {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.primary-button--formstyle:hover {
+  transform: translateY(-5px);
 }
 
 /* ========================Socialnet links list=======================*/
@@ -207,7 +235,7 @@ p {
   margin-bottom: 20px;
 }
 
-.logo--accent-color {
+.logo__web-element {
   color: var(--accent-color);
 }
 
@@ -582,24 +610,13 @@ p {
   transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
-.modal a:active,
-.modal a:focus {
-  outline: none;
-}
-
-.modal input,
-.modal textarea {
-  outline: none;
-}
-
-.modal input:active,
-.modal textarea:active {
-  outline: none;
-}
-
 /* ====================================Main form start here==========================================*/
 
-.modal-title {
+.main-form:focus-within {
+  border-color: var(--accent-color);
+}
+
+.main-form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.17;
@@ -609,19 +626,25 @@ p {
   margin-bottom: 30px;
 }
 
-.main-form:focus-within {
-  border-color: var(--accent-color);
-}
-
-.form-list {
+.main-form__list {
   margin-bottom: 20px;
 }
 
-.form-list-item {
+.main-form__list-item {
   position: relative;
 }
 
-.form-input {
+.main-form__list-item:nth-child(-n + 3) {
+  margin-bottom: 28px;
+}
+
+.main-form__input-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.main-form__input {
   margin: 0;
   padding: 11px 12px 11px 42px;
   border: 1px solid var(--primary-input-bgcolor);
@@ -629,7 +652,27 @@ p {
   cursor: pointer;
 }
 
-.form-label {
+.main-form__input:focus {
+  border-color: var(--accent-color);
+  cursor: initial;
+}
+
+.main-form__input--textarea-set {
+  resize: none;
+  padding: 12px 16px;
+  max-height: 120px;
+}
+
+.main-form__input--textarea-set::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+
+  color: #75757580;
+}
+
+.main-form__label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -643,11 +686,7 @@ p {
   transform: translateY(-100%);
 }
 
-.form-list > .form-list-item:nth-child(-n + 3) {
-  margin-bottom: 28px;
-}
-
-.form-input-shell .input-icon {
+.main-form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -657,68 +696,30 @@ p {
   fill: #000;
 }
 
-.form-input-shell {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.form-input:focus {
-  border-color: var(--accent-color);
-  cursor: initial;
-}
-
-.form-input:focus ~ .input-icon use {
+.main-form__input:focus ~ .main-form__icon use {
   fill: var(--accent-color);
 }
 
-.form-input.textarea-set {
-  resize: none;
-  padding: 12px 16px;
-  max-height: 120px;
-}
-
-.form-input.textarea-set::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-
-  color: #75757580;
-}
-
 /* ======================================Agree checkbokx start here================================== */
-.checkbox-shell {
+.main-form__checkbox-shell {
   margin-bottom: 30px;
 }
 
-.checkbox-area {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  margin: 0;
-  appearance: none;
-}
-
-.checkbox-label {
+.main-form__checkbox-label {
   position: relative;
   display: inline-block;
   padding: 0;
   cursor: pointer;
 }
 
-.checkbox-icon {
-  position: absolute;
-  visibility: hidden;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 15px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+.main-form__checkbox-area {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  appearance: none;
 }
 
-.checkbox-icon-shell {
+.main-form__checkbox-icon-shell {
   position: absolute;
   top: 50%;
   left: 0;
@@ -730,7 +731,19 @@ p {
   border: 2px solid black;
 }
 
-.agree-text {
+.main-form__checkbox-icon {
+  position: absolute;
+  visibility: hidden;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.main-form__agree-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -739,34 +752,24 @@ p {
   margin-left: 19px;
 }
 
-.agree-text .link {
+.main-form__link {
   text-decoration: underline;
   color: var(--accent-color);
 }
 
-.checkbox-area:checked + .checkbox-icon-shell {
+.main-form__checkbox-area:checked + .main-form__checkbox-icon-shell {
   visibility: hidden;
 }
 
-.checkbox-area:checked ~ .checkbox-icon {
+.main-form__checkbox-area:checked ~ .main-form__checkbox-icon {
   visibility: visible;
 }
 
 /* ======================================Agree checkbokx start here================================== */
 
-/* =====================================Form button=============================================== */
-.form-button {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.form-button:hover {
-  transform: translateY(-5px);
-}
-
 /* ====================================Main form end here==========================================*/
 
-.backdrop .close-button {
+.close-button {
   line-height: 0;
   position: absolute;
   display: block;
@@ -779,7 +782,7 @@ p {
   right: 8px;
 }
 
-.modal-close-icon {
+.close-button__icon {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -789,7 +792,7 @@ p {
   fill: #000;
 }
 
-.modal-close-icon:hover {
+.close-button__icon:hover {
   box-shadow: var(--item-shadow);
   animation-name: scalesChange;
   animation-duration: var(--primary-animation-duration);
@@ -816,16 +819,17 @@ p {
 
 /* ======================================Works filter start here============================================= */
 
-.filter-list {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filter-list > .list-item + .list-item {
+.filter__type:not(:first-child) {
   margin-left: 8px;
 }
-.filter-button {
+
+.filter__button {
   background-color: #f5f4fa;
   color: var(--title-text-color);
 
@@ -842,8 +846,8 @@ p {
   padding: 6px 22px;
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter__button:hover,
+.filter__button:focus {
   background-color: var(--accent-color);
   color: #ffffff;
   box-shadow: var(--item-shadow);
@@ -853,28 +857,38 @@ p {
 
 /* =====================================Works examples start here============================================*/
 
-.filter-items {
+.examples-set {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
 
   /* display: grid;
   grid: repeat(3, 1fr) / repeat(3, 1fr);
   grid-gap: 30px; */
 }
 
-.filter-items > .list-item {
-  flex-basis: calc(100% / 3 - 30px);
+.examples-set__item {
+  flex-basis: calc((100% - 60px) / 3);
   margin: 0 30px 30px 0;
 }
 
-.filter-items > .list-item:hover,
-.filter-items > .list-item:focus {
+.examples-set__item:nth-child(3n) {
+  margin-right: 0;
+}
+.examples-set__item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.examples-set__item:hover,
+.examples-set__item:focus {
   box-shadow: var(--item-shadow);
 }
 
-.filter-items .link-discription {
+.example__image-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.example__link-discription {
   padding-top: 20px;
   padding-left: 24px;
   padding-bottom: 20px;
@@ -884,7 +898,7 @@ p {
   border-bottom: 1px solid #eeeeee;
 }
 
-.filter-items .title {
+.example__title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -892,20 +906,15 @@ p {
   letter-spacing: 0.06em;
 }
 
-.filter-items .filter-type {
+.example__type {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
 
-  margin: 4px 0 0;
+  margin: 3px 0 0;
 }
 
-.filter-items .image-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.filter-items .image-overlay {
+.example__image-overlay {
   position: absolute;
   display: flex;
   align-items: center;
@@ -927,8 +936,8 @@ p {
   transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
-.filter-items > .list-item:hover .image-overlay,
-.filter-items > .list-item:focus .image-overlay {
+.examples-set__item:hover .example__image-overlay,
+.examples-set__item:focus .example__image-overlay {
   transform: translateY(0);
 }
 /* =====================================Works examples end here============================================*/
