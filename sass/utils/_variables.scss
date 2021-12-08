@@ -1,19 +1,3 @@
-// :root {
-//   --primary-text-color: #757575;
-//   --title-text-color: #212121;
-//   --primary-icon-color: #afb1b8;
-//   --accent-color: #2196f3;
-//   --primary-bgcolor: #ffffff;
-//   --middle-bgkolor: #f5f4fa;
-//   --secondary-bgcolor: #2f303a;
-//   --primary-input-bgcolor: #21212133;
-
-//   --item-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-//   --color-gradient: rgba(47, 48, 58, 0.4);
-//   --primary-animation-duration: 250ms;
-//   --primary-animation-tf: cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
 $colorPrimaryText: #757575;
 $colorTitleText: #212121;
 $colorPrimaryIcon: #afb1b8;
@@ -31,5 +15,6 @@ $animationDuration: 250ms;
 $animationTimeFunction: cubic-bezier(0.4, 0, 0.2, 1);
 
 $fontFamilyPrimary: Roboto, sans-serif;
+$fontFamilySecondary: Raleway, sans-serif;
 $fontSizePrimary: 14px;
 $fontLetterSpacingPrimary: 0.03em;

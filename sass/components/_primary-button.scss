@@ -1,4 +1,4 @@
-@import url(../utils/_variables.scss);
+@import "../utils/_variables.scss";
 
 .primary-button {
   color: #ffffff;
@@ -21,6 +21,23 @@
   border: 0;
   border-radius: 4px;
   transform: translateY(0);
-  transition: transform var(--primary-animation-duration)
-    var(--primary-animation-tf);
+  transition: transform $animationDuration $animationTimeFunction;
+
+  &__core {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.primary-button--formstyle {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: translateY(-5px);
+  }
 }

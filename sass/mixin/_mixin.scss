@@ -9,5 +9,3 @@ $actions: "color", "fill", "border", "background-color", "box-shadow";
     }
   }
 }
-
-@include generateAction($actions);
