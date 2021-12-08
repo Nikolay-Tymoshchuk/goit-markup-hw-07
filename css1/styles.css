@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --primary-icon-color: #afb1b8;
@@ -12,18 +12,18 @@
   --color-gradient: rgba(47, 48, 58, 0.4);
   --primary-animation-duration: 250ms;
   --primary-animation-tf: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-body {
+/* body {
   margin: 0;
   background-color: var(--primary-bgcolor);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
@@ -69,14 +69,14 @@ article {
   margin: 0;
   padding: 0;
   list-style: none;
-}
+} */
 
-.section {
+/* .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
-.section-title {
+/* .section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -102,7 +102,7 @@ article {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-}
+} */
 
 /* ========================Primary button=======================*/
 
@@ -125,7 +125,8 @@ article {
   border: 0;
   border-radius: 4px;
   transform: translateY(0);
-  transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: transform var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 .primary-button__core {
@@ -187,7 +188,8 @@ article {
 /* ===============================Features=============================== */
 
 .h-color {
-  transition: color var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: color var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 .h-fill {
@@ -195,15 +197,18 @@ article {
 }
 
 .h-border {
-  transition: border var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: border var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 .h-bgc {
-  transition: background-color var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: background-color var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 .h-shadow {
-  transition: box-shadow var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: box-shadow var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 /*========================================Header start here==========================================*/
@@ -275,7 +280,7 @@ article {
 }
 
 .site-nav__link--current:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   bottom: 0;
@@ -323,8 +328,12 @@ article {
 
 .hero {
   background-color: #c4c4c4;
-  background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)),
-    url('../images/main-banner.jpg');
+  background-image: linear-gradient(
+      to right,
+      var(--color-gradient),
+      var(--color-gradient)
+    ),
+    url("../images/main-banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1600px 600px;
@@ -607,7 +616,8 @@ article {
 
   transform: translate(-50%, -50%) scale(1);
 
-  transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: transform var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 /* ====================================Main form start here==========================================*/
@@ -933,7 +943,8 @@ article {
   background-color: rgba(33, 150, 243, 0.9);
   pointer-events: none;
   transform: translateY(101%);
-  transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
+  transition: transform var(--primary-animation-duration)
+    var(--primary-animation-tf);
 }
 
 .examples-set__item:hover .example__image-overlay,

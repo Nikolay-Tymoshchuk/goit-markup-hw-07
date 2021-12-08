@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAMI,AAAA,SAAS,AAAU,CACjB,UAAU,CAAE,KAAc,CCsBZ,KAAK,CACD,4BAA4B,CDtB/C,AAFD,AAAA,QAAQ,AAAW,CACjB,UAAU,CAAE,IAAc,CCsBZ,KAAK,CACD,4BAA4B,CDtB/C,AAFD,AAAA,UAAU,AAAS,CACjB,UAAU,CAAE,MAAc,CCsBZ,KAAK,CACD,4BAA4B,CDtB/C,AAFD,AAAA,oBAAoB,AAAD,CACjB,UAAU,CAAE,gBAAc,CCsBZ,KAAK,CACD,4BAA4B,CDtB/C,AAFD,AAAA,cAAc,AAAK,CACjB,UAAU,CAAE,UAAc,CCsBZ,KAAK,CACD,4BAA4B,CDtB/C",
+    "sources": [
+        "../sass/mixin/mixin.scss",
+        "../sass/utils/_variables.scss"
+    ],
+    "names": [],
+    "file": "mixin.min.css"
+}
