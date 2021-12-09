@@ -936,7 +936,7 @@ body {
   overflow: hidden;
 }
 
-.example__link-discription {
+.example__link-box {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -951,7 +951,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.example__type {
+.example__text {
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
